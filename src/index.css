@@ -3,3 +3,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+@font-face {
+  font-family: 'Netflix Sans';
+  src: url('./Assets/netflix-sans-font/NetflixSans-Medium.otf');
+  src: url('./Assets/netflix-sans-font/NetflixSans-Bold.otf') format('embedded-opentype'),
+        url('./Assets/netflix-sans-font/NetflixSans-Regular.woff2') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
