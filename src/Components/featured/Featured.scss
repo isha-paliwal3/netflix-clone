@@ -1,0 +1,122 @@
+.featured{
+    position:relative;
+    height: 100vh;
+
+    .category {
+        position:absolute;
+        top: 80px;
+        left: 50px;
+        padding: 8px 15px;
+        font-family: 'Netflix Sans';
+        font-size: 2.7rem;
+        font-weight: 500;
+        color: #fff;
+        display: flex;
+        align-items: center;
+            
+        select {
+          cursor: pointer;
+        background-color: rgba(0,0,0,.9);
+          border: 1px solid white;
+          color: white;
+          margin-left: 50px;
+          padding: 5px;
+          opacity: 1;
+          font-size: 1rem;
+          font-weight: bold;
+          margin-top: 10px;
+          
+          &:hover{
+            cursor: pointer;
+            outline: none;
+        }
+        
+        option{
+            font-weight:normal;
+            display: block;
+            white-space: nowrap;
+            min-height: 1.2em;
+            padding: 16px;
+        }
+    
+        }
+        
+      }
+    
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .info{
+        position: absolute;
+        width: 35%;
+        left: 50px;
+        bottom: 100px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 400px;
+        }
+        
+        .desc{
+            margin: 20px 10px;
+            font-weight: 500;
+            font-family: 'Netflix Sans',Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);
+            font-size: 1.2vw;
+            font-weight: 400;
+            line-height: normal;
+            width: 100%;
+        }
+
+        .buttons{
+            display: flex;
+
+            button{
+                border: none;
+                border-radius: 5px;
+                padding: 0px 20px;
+                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.2rem;
+                font-weight: 600;    
+                line-height: 2.4rem;
+                font-family: 'Netflix Sans';
+                cursor: pointer;
+
+
+                &.play {
+                    background-color: white;
+                    color: var(--main-color);
+                  }
+          
+                  &.more {
+                    background-color: gray;
+                    color: white;
+                  }
+            }
+
+
+            .icon-play{
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+
+            .icon-info{
+                height: 2rem;
+                width: 2rem;
+            }
+
+            span{
+                margin: 5px;
+            }
+        }
+        
+    }
+}
