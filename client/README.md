@@ -1,5 +1,5 @@
 
-## Netflix-CloneNetflix Clone
+## Netflix-Clone
 
 Netflix is a streaming video service that has come to dominate the market. It's easy to use, and it has great content at an unbeatable price. It's even become a verb (Netflix and chill!), which makes it perfect for people who don't have time to watch TV but still want to enjoy some entertainment at home.
 
