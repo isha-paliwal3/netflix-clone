@@ -2,16 +2,24 @@ const express = require("express");
 const app = express();  //creating application
 const mongoose = require("mongoose"); //connecting mongodb connection
 const dotenv = require("dotenv");
+const authRoute = require("./routes/auth")
 
 dotenv.config();
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect(process.env.MONGO_URL).then(() => console.log('Db Connected')).catch((err) => console.log(err));
-  
-  // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
+    
+  mongoose.set('strictQuery', true);  
+  await mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+  }).then(() => console.log('Db Connected')).catch((err) => console.log(err));
+
 }
+
+app.use(express.json());           //to use body json file 
+app.use("/api/auth" , authRoute);  //if you make any request take this end point and this end point belong to this route
 
 app.listen(8800, () => {
     console.log('Backend server is running');
