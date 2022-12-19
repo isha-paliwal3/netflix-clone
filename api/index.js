@@ -3,6 +3,7 @@ const app = express();  //creating application
 const mongoose = require("mongoose"); //connecting mongodb connection
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth")
+const userRoute = require("./routes/users")
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ async function main() {
 
 app.use(express.json());           //to use body json file 
 app.use("/api/auth" , authRoute);  //if you make any request take this end point and this end point belong to this route
+app.use("/api/users" , userRoute);
 
 app.listen(8800, () => {
     console.log('Backend server is running');
