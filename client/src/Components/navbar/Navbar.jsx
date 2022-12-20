@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import logo from './logo.png'
 import userAvtar from '../../Images/Netflix-avatar.png'
 import './Navbar.scss'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -17,9 +18,15 @@ export default function Navbar() {
       <div className="container">
         <div className="left">
             <img src={logo} alt="Netflix" />
+            <Link to="/" className="link">
             <span>Home</span>
+            </Link>    
+            <Link to="/tv shows" className="link">
             <span>TV Shows</span>
+            </Link>
+            <Link to="/movies" className="link">
             <span>Movies</span>
+            </Link>
             <span>New & Popular</span>
             <span>My List</span>
         </div>

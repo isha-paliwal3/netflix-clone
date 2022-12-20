@@ -4,11 +4,11 @@ import List from '../../Components/list/List'
 import Navbar from '../../Components/navbar/Navbar'
 import './Home.scss'
 
-export default function Home() {
+export default function Home({type}) {
   return (
     <div className='home'>
       <Navbar/>
-      <Featured />
+      <Featured type={type}/>
       <List/>
       <List/>
       <List/>
